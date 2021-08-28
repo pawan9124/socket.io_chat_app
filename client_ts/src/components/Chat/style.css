@@ -31,6 +31,7 @@
     overflow: scroll;
     border:1px solid grey;
     width:70%;
+    background-color: #ffebcd30;
 }
 .chat_input{
 display: flex;
@@ -57,7 +58,6 @@ margin-left:15%;
 }
 .chat_panel{
     padding:25px;
-    background-color: #ffebcd30;
 }
 .current_user_chat{
     justify-content: flex-end;
