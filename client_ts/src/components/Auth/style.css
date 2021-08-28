@@ -1,0 +1,53 @@
+
+.login_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.login_container h2 {
+    margin:50px;
+    color: #000000a8;
+    font-weight: 400;
+}
+.login_box{
+    display:flex;
+    width:25%;
+    height:500px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border:1px solid #e6e6e6;
+    margin-top:20px;
+}
+.login_input, .login_password{
+ width: 90%;
+ height:40px;
+ margin:10px;
+}
+.login_button{
+    width:250px;
+    height:40px;
+    padding:10px;
+    margin-top:5%;
+    color:#3f3f41;
+    cursor: pointer;
+    border:0.3px solid #e6e6e6;
+    background-color:rgba(0,212,255,72);
+    font-size:14px;
+    }
+
+.spam_message {
+    margin-top: 20px;
+    font-size: 13px;
+    color:grey;
+    justify-content: flex-end;
+    bottom:-10%;
+    position:relative;
+}
+.logo{
+    height:100px;
+    width:100px;
+    top:-10%;
+    position: relative;
+}

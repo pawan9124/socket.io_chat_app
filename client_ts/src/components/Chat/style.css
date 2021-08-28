@@ -1,0 +1,135 @@
+.chat_screen {
+    padding:10px;
+}
+.chat_screen h3{
+    color: #000000a8;
+    font-weight: 400;
+}
+
+.logout_button{
+    display:flex;
+    justify-content: flex-end;
+    width:84%;
+    margin:25px;
+}
+.logout_button button {
+    padding: 8px 15px;
+    border:0.3px solid #e6e6e6;
+    color:white;
+    font-weight: 400;
+    background-color: #ff6a00;
+    cursor: pointer;
+}
+.chat_history_container {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.chat_history{
+    height:600px;
+    overflow: scroll;
+    border:1px solid grey;
+    width:70%;
+}
+.chat_input{
+display: flex;
+width:70%;
+justify-content: center;
+margin-left:15%;
+}
+.chat_input input{
+ height: 30px;
+ flex:1;
+}
+.chat_input button {
+    flex:0.2;
+    height:36px;
+    background-color:#30a00be0;
+    color:white;
+    border:1px solid #e6e6e6;
+    cursor: pointer;
+}
+.chat_list{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+.chat_panel{
+    padding:25px;
+    background-color: #ffebcd30;
+}
+.current_user_chat{
+    justify-content: flex-end;
+    display:flex;
+}
+.other_user_chat{
+    justify-content:flex-start;
+    display:flex;
+}
+
+.data_message_panel {
+    width:auto;
+    max-width:40%;
+    min-width: 15%;
+    display: flex;
+    justify-content: space-between;
+    height:auto;
+    border-radius: 10px;
+    margin:5px;
+    align-items: center;
+    padding:5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+
+}
+.data_username{
+    font-weight:500;
+    font-size:13px;
+    flex:0.2;
+}
+.data_message{
+    font-weight: 300;
+    font-size:11px;
+    flex:0.6;
+    margin-left:2px;
+    text-align: initial;
+}
+.data_time{
+    font-weight: 200;
+    font-size:8px;
+    flex:0.2
+}
+.typing_user{
+    position: relative;
+    top: -40px;
+    left: -31%;
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.spam_warning{
+    background-color: yellow;
+    font-weight:300;
+    color:black;
+    position: relative;
+    left:-18%;
+    font-size:13px;
+}
+.banned_user{
+    background-color: Red;
+    font-weight:300;
+    color: white;
+    position: relative;
+    left:-28%;
+    font-size:13px;
+}
+.username{
+    color:green;
+}
+.warning_message{
+    margin-top:10px;
+    font-size:12px;
+    background-color: yellow;
+
+}
