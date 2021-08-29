@@ -1,5 +1,5 @@
-import { Chat, User } from '../models/models.js';
-import { chatObject } from '../socketio/socket.io.js';
+import { Chat, User } from '../models/models';
+import { chatObject } from '../socketio/socket.io';
 
 
 

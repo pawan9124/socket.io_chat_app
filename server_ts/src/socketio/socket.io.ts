@@ -1,5 +1,5 @@
-import { addChatMessage } from "../routes/chat.js";
-import { floodObject } from './floodPrevention.js';
+import { addChatMessage } from "../routes/chat";
+import { floodObject } from './floodPrevention';
 import {Socket, Server} from 'socket.io';
 
 
@@ -13,7 +13,8 @@ type typingProps = {
 }
 export type chatObject = {
     id:number,
-    message:string
+    message:string,
+    username:string,
 }
 
 export const connectSocket = (io:Server, socket:Socket) => {
@@ -52,12 +53,10 @@ export const connectSocket = (io:Server, socket:Socket) => {
     //handle the number of users when logged in 
     socket.on('login', () => {
         numUsers += 1;
-        console.log("HERE LOGIN", numUsers)
     });
 
     //get the number of user count
     socket.on('get_num_user',()=>{
-        console.log("NUMBER",numUsers)
         io.emit('user_count',numUsers);
     })
 

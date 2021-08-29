@@ -4,7 +4,7 @@ import apiRoutes from './routes/routes';
 import {Server,Socket} from 'socket.io';
 import { createServer } from 'http';
 import cors from 'cors';
-import { connectSocket } from './socketio/socket.io.js';
+import { connectSocket } from './socketio/socket.io';
 
 
 const app:Application = express();

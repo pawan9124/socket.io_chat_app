@@ -13,8 +13,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const models_js_1 = require("../models/models.js");
-const models_js_2 = require("../models/models.js");
+const models_1 = require("../models/models");
+const models_2 = require("../models/models");
 const router = express_1.default.Router();
 router.post('/login', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
@@ -23,7 +23,7 @@ router.post('/login', (req, res) => __awaiter(void 0, void 0, void 0, function* 
             password: req.body.password
         };
         //find the user
-        const user = yield models_js_2.User.findOne({ where: obj });
+        const user = yield models_2.User.findOne({ where: obj });
         if (user) {
             const sendObj = Object.assign(Object.assign({}, user.dataValues), { isAuthenticated: true, isNew: false });
             delete sendObj.password;
@@ -32,7 +32,7 @@ router.post('/login', (req, res) => __awaiter(void 0, void 0, void 0, function* 
             res.status(201).send(sendObj);
         }
         else {
-            const newUser = yield models_js_2.User.create(obj);
+            const newUser = yield models_2.User.create(obj);
             //check if exists else create
             const sendData = Object.assign(Object.assign({}, newUser.dataValues), { isNew: true, isAuthenticated: true });
             delete sendData.createdAt;
@@ -48,9 +48,9 @@ router.post('/login', (req, res) => __awaiter(void 0, void 0, void 0, function* 
 }));
 router.get('/history', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const history = yield models_js_1.Chat.findAll({
+        const history = yield models_1.Chat.findAll({
             include: [{
-                    model: models_js_2.User,
+                    model: models_2.User,
                     attributes: ["id", "username"]
                 }],
         });

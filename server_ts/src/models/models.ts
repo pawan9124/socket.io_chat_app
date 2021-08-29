@@ -1,5 +1,6 @@
 import Sequelize from 'sequelize';
-import db from '../config/database.js';
+import db from '../config/database';
+
 
 //Define a model for the user
 export const User:Sequelize.ModelCtor<any> = db.define('users',{

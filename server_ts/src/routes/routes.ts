@@ -1,6 +1,6 @@
 import express, {Request,Response} from 'express';
-import { Chat } from '../models/models.js';
-import { User } from '../models/models.js';
+import { Chat } from '../models/models';
+import { User } from '../models/models';
 
 
 const router = express.Router();
@@ -39,7 +39,7 @@ router.post('/login', async (req:Request, res:Response) => {
         res.status(201).send(sendData);
     }
 
-    } catch (error) {
+    } catch (error:any) {
         console.error("Error while creating or login user", error);
         res.status(400).send(error.message);
     }
@@ -55,7 +55,7 @@ router.get('/history',async (req:Request,res:Response)=>{
             
         });
         res.status(200).send(history);
-    } catch (error) {
+    } catch (error:any) {
         console.error("Error while fetching the history",error);
         res.status(400).send(error.message);
     }

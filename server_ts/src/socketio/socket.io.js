@@ -39,7 +39,6 @@ const connectSocket = (io, socket) => {
     }));
     //when the clients emits 'typing', we broadcast it to others
     socket.on('typing', ({ id, username }) => {
-        console.log("KDKKD");
         socket.broadcast.emit('typing', { id, username, isTyping: true });
     });
     //when the client stop typing, borad cast to others
@@ -49,11 +48,9 @@ const connectSocket = (io, socket) => {
     //handle the number of users when logged in 
     socket.on('login', () => {
         numUsers += 1;
-        console.log("HERE LOGIN", numUsers);
     });
     //get the number of user count
     socket.on('get_num_user', () => {
-        console.log("NUMBER", numUsers);
         io.emit('user_count', numUsers);
     });
     //handle the number of users logged out
